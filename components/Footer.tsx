@@ -1,0 +1,2 @@
+import {spotifyUrl,youtubeUrl} from '@/data/content';
+export default function Footer(){return <footer><div><strong>BRYAN VILLALOBOS</strong><p>Cantante · Músico · Compositor</p></div><div><a href={spotifyUrl} target="_blank">Spotify</a><a href={youtubeUrl} target="_blank">YouTube</a><a href="#contacto">Booking</a></div><p className="credit">© 2026 Bryan Villalobos · Experiencia digital preparada por System Lab CR</p></footer>}
