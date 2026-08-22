@@ -7,7 +7,7 @@ const links = [
   ['Videos', '#videos'],
   ['Contrataciones', '#servicios'],
   ['Agenda', '#agenda'],
-  ['Historia', '#historia'],
+  ['Biografía', '#biografia'],
 ];
 
 export function SiteHeader() {
@@ -22,7 +22,9 @@ export function SiteHeader() {
 
   return (
     <header className="siteHeader">
-      <a className="brand" href="#inicio" onClick={close}>BRYAN <span>V.</span></a>
+      <a className="brand brandLogo" href="#inicio" onClick={close}>
+  <img src="/images/logo-bryan.png" alt="Bryan Villalobos" />
+</a>
 
       <nav className="desktopNav" aria-label="Navegación principal">
         {links.map(([label, href]) => <a key={href} href={href}>{label}</a>)}

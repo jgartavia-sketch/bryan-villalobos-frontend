@@ -1455,3 +1455,24 @@ footer p {
 .selectedServicesSummary .selectedPills {
   margin: 0;
 }
+/* Logo oficial Bryan Villalobos */
+.brandLogo {
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.brandLogo img {
+  display: block;
+  width: auto;
+  height: 52px;
+  max-width: 190px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .brandLogo img {
+    height: 42px;
+    max-width: 155px;
+  }
+}

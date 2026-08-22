@@ -4,12 +4,20 @@ export const spotifyUrl =
 export const youtubeUrl =
   'https://www.youtube.com/channel/UCliykiygYQcR1iYTs7pdE_Q';
 
-export const youtubeUploadsPlaylist = 'UUliykiygYQcR1iYTs7pdE_Q';
-
-export const youtubeSlides = Array.from({ length: 10 }, (_, index) => ({
-  index,
-  title: index === 0 ? 'Último video del canal' : `Video ${index + 1} del canal`,
-}));
+export const youtubeSlides = [
+  { id: '2XXp1YpVPSk', title: 'Maleta Lista' },
+  { id: 'pOVsBANrnm8', title: 'Te Lo Soñaste' },
+  { id: 'ysVquqSwwVo', title: 'Las Estrellas de Abi' },
+  { id: 'narFqQn1oJ4', title: 'Tu Última Opción' },
+  { id: 'IiqATw1q3Ks', title: 'No es Amor' },
+  { id: '9tUWZ0WSOCU', title: 'Desahucio' },
+  { id: 'ZUlW6LGuHzQ', title: 'Labios' },
+  { id: 'j8UbNq_zrFU', title: 'Y Nada Más' },
+  { id: 'Ti3U9382WDE', title: 'Otra Semana Sin Vos' },
+  { id: '88TrMf_ffHY', title: 'Compas — Bryan Villalobos y Ana Madrigal' },
+  { id: 's5OZcAuwQ-c', title: 'Pétalos de Amor' },
+  { id: 'DlFz9wxMmWE', title: 'A Tu Lado' },
+];
 
 export const services = [
   {

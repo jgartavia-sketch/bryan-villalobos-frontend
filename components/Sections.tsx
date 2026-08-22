@@ -6,7 +6,6 @@ import {
   services,
   spotifyUrl,
   youtubeSlides,
-  youtubeUploadsPlaylist,
   youtubeUrl,
 } from '@/data/content';
 
@@ -28,8 +27,8 @@ export function Music() {
 
       <div className="musicIntro">
         <p className="copy">
-          El catálogo oficial de Bryan, integrado directamente en su casa
-          digital. La música primero; las plataformas, a un clic.
+          Te invito a escuchar mis canciones, conocer mi música y descubrir un poco
+          de las historias que quiero compartir con vos.
         </p>
         <a className="textLink" href={spotifyUrl} target="_blank" rel="noreferrer">
           ABRIR PERFIL EN SPOTIFY ↗
@@ -84,8 +83,8 @@ export function Videos() {
 
       <div className="youtubeIntro">
         <p className="copy">
-          Presentaciones reproducibles directamente desde el canal oficial.
-          Desliza, elige y dale play sin abandonar el sitio.
+          Mirá mis videos, elegí tu canción favorita y acompañame a través de cada
+          historia, cada letra y cada melodía.
         </p>
         <a className="metalButton" href={youtubeUrl} target="_blank" rel="noreferrer">
           VER CANAL COMPLETO ↗
@@ -93,12 +92,12 @@ export function Videos() {
       </div>
 
       <div className="youtubeTrack" ref={trackRef}>
-        {youtubeSlides.map((video) => (
-          <article className="youtubeCard" key={video.index}>
+        {youtubeSlides.map((video, index) => (
+          <article className="youtubeCard" key={video.id}>
             <div className="youtubeFrameShell">
               <iframe
                 className="youtubeFrame"
-                src={`https://www.youtube.com/embed/videoseries?list=${youtubeUploadsPlaylist}&index=${video.index}&rel=0`}
+                src={`https://www.youtube.com/embed/${video.id}?rel=0`}
                 title={`Bryan Villalobos — ${video.title}`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -106,7 +105,7 @@ export function Videos() {
               />
             </div>
             <div className="youtubeMeta">
-              <span>{String(video.index + 1).padStart(2, '0')}</span>
+              <span>{String(index + 1).padStart(2, '0')}</span>
               <div>
                 <strong>{video.title}</strong>
                 <p>Canal oficial · Bryan Villalobos</p>
@@ -384,21 +383,35 @@ export function Agenda() {
 
 export function Story() {
   return (
-    <section className="story" id="historia">
+    <section className="story" id="biografia">
       <div className="storyImg" />
       <div className="storyText">
-        <p className="eyebrow">05 — HISTORIA</p>
+        <p className="eyebrow">05 — BIOGRAFÍA</p>
         <h2>Música que se convirtió en <em>camino.</em></h2>
         <p>
-          La trayectoria de Bryan Villalobos se construye entre escenarios,
-          canciones y la conexión directa con el público. Cantante, músico y
-          compositor costarricense, su propuesta une interpretación, sensibilidad y oficio.
+          La música siempre ha sido parte de mi camino. Desde niño encontré en ella
+          una forma de expresarme. Empecé cantando en actos cívicos y festivales
+          escolares, hasta que con los años esa pasión dejó de ser solamente un sueño
+          y se convirtió en mi profesión.
         </p>
         <p>
-          Este espacio está preparado para contar su historia oficial con profundidad:
-          los comienzos, las influencias, los escenarios y las canciones que marcaron cada etapa.
+          Mi camino me llevó por la docencia musical, diferentes agrupaciones
+          nacionales, hoteles, bodas, eventos privados y escenarios que jamás imaginé
+          alcanzar. He tenido la oportunidad de abrir conciertos para artistas como
+          Gilberto Santa Rosa y La Internacional Sonora Santanera, y en 2024 viví una
+          nueva etapa al participar en Tu Cara Me Suena Costa Rica.
         </p>
-        <small>Biografía editorial en preparación con información oficial del artista.</small>
+        <p>
+          También hubo momentos difíciles. Apostar por vivir completamente de la música
+          significó empezar de nuevo, aprender, equivocarme y seguir adelante. Pero
+          precisamente ahí confirmé algo que siempre quise demostrarme: sí se puede
+          construir una vida alrededor del arte.
+        </p>
+        <p>
+          Hoy continúo escribiendo esa historia con mis propias canciones, nuevas
+          presentaciones y proyectos que siguen llevando mi música a más personas.
+        </p>
+        <small>Y todavía queda mucho por cantar.</small>
       </div>
     </section>
   );
