@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useMemo, useRef, useState } from 'react';
+import { FormEvent, useRef, useState } from 'react';
 import {
   events,
   services,
@@ -304,17 +304,6 @@ function QuoteModal({
 }
 
 export function Agenda() {
-  const weekdays = useMemo(
-    () => [
-      { day: 'LUN', label: 'Lunes', status: 'Consultar' },
-      { day: 'MAR', label: 'Martes', status: 'Consultar' },
-      { day: 'MIÉ', label: 'Miércoles', status: 'Consultar' },
-      { day: 'JUE', label: 'Jueves', status: 'Consultar' },
-      { day: 'VIE', label: 'Viernes', status: 'Consultar' },
-    ],
-    []
-  );
-
   return (
     <section className="section agenda" id="agenda">
       <div className="sectionHead">
@@ -337,33 +326,6 @@ export function Agenda() {
         </p>
       </div>
 
-      <div className="calendarShell">
-        <div className="calendarTop">
-          <div>
-            <span>DISPONIBILIDAD SEMANAL</span>
-            <h3>Lunes — Viernes</h3>
-          </div>
-          <span className="calendarLegend"><i /> Disponible / por confirmar</span>
-        </div>
-
-        <div className="weekGrid">
-          {weekdays.map((item) => (
-            <div
-              className="dayCard"
-              key={item.day}
-              title={`${item.label} — disponibilidad por confirmar`}
-            >
-              <span>{item.day}</span>
-              <strong>{item.label}</strong>
-              <div className="availability">
-                <i />
-                {item.status}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="eventList agendaEvents">
         {events.map((event) => (
           <div className="event" key={`${event.date}-${event.place}`}>
@@ -373,7 +335,11 @@ export function Agenda() {
               <p>{event.city}</p>
             </div>
             <span>{event.kind}</span>
-            <a href="#servicios">CONSULTAR →</a>
+            {event.kind !== 'Todo el día' && (
+              <a href="#servicios">
+                CONSULTAR DISPONIBILIDAD PARA EL MISMO DÍA →
+              </a>
+            )}
           </div>
         ))}
       </div>
