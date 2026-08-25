@@ -48,9 +48,51 @@ export const services = [
 
 export const events = [
   {
-    date: 'PRÓXIMAMENTE',
-    place: 'Nuevas fechas públicas',
-    city: 'Costa Rica',
-    kind: 'Agenda en actualización',
+    date: '28 AGO 2026',
+    place: 'Evento privado',
+    city: 'Ubicación reservada',
+    kind: 'Tarde',
+  },
+  {
+    date: '29 AGO 2026',
+    place: 'Evento privado',
+    city: 'Ubicación reservada',
+    kind: 'Todo el día',
+  },
+  {
+    date: '30 AGO 2026',
+    place: 'Evento privado',
+    city: 'Ubicación reservada',
+    kind: 'Desayuno',
+  },
+  {
+    date: '09 SEP 2026',
+    place: 'Día del Niño',
+    city: 'Escuela Gamonales',
+    kind: '9:00 a. m.',
+  },
+  {
+    date: '12 SEP 2026',
+    place: 'Evento privado',
+    city: 'Ubicación reservada',
+    kind: 'Noche',
+  },
+  {
+    date: '14 SEP 2026',
+    place: 'Supermercado Economás',
+    city: 'Aguas Zarcas',
+    kind: '6:00 p. m.',
+  },
+  {
+    date: '19 SEP 2026',
+    place: 'Centro Comercial El Encuentro',
+    city: 'Presentación en vivo',
+    kind: '8:00 p. m.',
+  },
+  {
+    date: '26 SEP 2026',
+    place: 'Restaurante Nankú',
+    city: 'Presentación en vivo',
+    kind: 'Hora por confirmar',
   },
 ];
