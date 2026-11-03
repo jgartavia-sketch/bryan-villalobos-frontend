@@ -72,6 +72,12 @@ export const events = [
     kind: '7:00 p. m.',
   },
   {
+    date: '08 NOV 2026',
+    place: 'Evento privado',
+    city: 'Ubicación reservada',
+    kind: '2:00 p. m.',
+  },
+  {
     date: '14 NOV 2026',
     place: 'Restaurante Nanku',
     city: 'Fortuna',
@@ -120,4 +126,5 @@ export const events = [
     kind: '8:00 p. m.',
   },
 ];
+
 
