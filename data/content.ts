@@ -78,9 +78,9 @@ export const events = [
     kind: '2:00 p. m.',
   },
   {
-    date: '14 NOV 2026',
-    place: 'Restaurante Nanku',
-    city: 'Fortuna',
+    date: '15 NOV 2026',
+    place: 'Hotel Río Celeste Hideaway',
+    city: 'Presentación en vivo',
     kind: '7:00 p. m.',
   },
   {
@@ -90,9 +90,9 @@ export const events = [
     kind: '5:00 p. m.',
   },
   {
-    date: '21 NOV 2026',
-    place: 'Mirrus Pizza',
-    city: 'Pital',
+    date: '19 NOV 2026',
+    place: 'Restaurante Nankú',
+    city: 'Fortuna',
     kind: '7:00 p. m.',
   },
   {
@@ -126,5 +126,6 @@ export const events = [
     kind: '8:00 p. m.',
   },
 ];
+
 
 
